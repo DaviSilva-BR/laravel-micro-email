@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class CompanyCreatedWelcome extends Mailable
+class CompanyCreatedWelcome extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -22,7 +22,7 @@ class CompanyCreatedWelcome extends Mailable
     }
 
     /**
-     * Build the message.
+     * Build the message. 
      *
      * @return $this
      */
